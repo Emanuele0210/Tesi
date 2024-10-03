@@ -1,0 +1,221 @@
+/*==========================================*/
+/*= MENU NAVBAR =*/
+/*==========================================*/
+.Menu_navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 25%;
+    transform: translateY(-128px);
+}
+.Menu_navbar.-Right-{
+    margin-bottom: 165px;
+}
+/*==========================================*/
+/*= ASIDE =*/
+/*==========================================*/
+.Menu_navbar aside{
+    position: relative;
+    padding: 2px; 
+    width: 320px;
+    background-color: var(--clrB); 
+    clip-path: var(--plgn7);
+}
+.Menu_navbar.-Right- aside{
+    position: absolute;
+    bottom: 0; 
+}
+.Aside_style{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clrZ); 
+    clip-path: var(--plgn8);
+}
+.Aside_style p{
+    color: var(--txt2);
+    padding: 15px 0;
+}
+.Aside_style a{
+    margin-left: 10px;
+    border: 1px solid transparent;
+}
+.Aside_style svg{
+    display: block;
+    fill: var(--txt2);
+    width: 24px;
+    height: 24px;
+}
+/*==========================================*/
+/*= ANIMATION ASIDE =*/
+/*==========================================*/
+.Aside_style a:nth-of-type(1){
+    --color_svg: #5865f2;
+    --color_svg-1 : #141736;
+}
+.Aside_style a:nth-of-type(2){
+    --color_svg: #fff;
+    --color_svg-1 : #000;
+}
+.Aside_style a:nth-of-type(3){
+    --color_svg: #e20093;
+    --color_svg-1 : #36142a;
+}
+.Aside_style a:nth-of-type(4){
+    --color_svg: #5865f2;
+    --color_svg-1 : #141736;
+}
+.Aside_style a:hover{
+    border-color: var(--color_svg);
+    background-color: var(--color_svg-1);
+    box-shadow: inset 0 0 3px var(--color_svg),
+    0 0 5px var(--color_svg), 0 0 5px var(--color_svg);
+}
+.Aside_style a:hover > svg{
+    fill: var(--color_svg);
+}
+/*==========================================*/
+/*= NAV =*/
+/*==========================================*/
+.Menu_navbar.-Right- nav{
+    padding-bottom: 60px;
+}
+.Menu_navbar nav li{
+    margin-top: 10px;
+}
+.Menu_navbar nav a{
+    display: block;
+    position: relative;
+    padding: 15px;
+    width: 272px;
+    background-color: var(--clrD);
+    clip-path: var(--plgn14);
+    color: var(--txt3);
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+.Menu_navbar nav a::before{
+    position: absolute;
+    content: "";
+    inset: 2px;
+    background-color: var(--clrA);
+    clip-path: var(--plgn14);
+    z-index: -1;
+}
+@media screen and (max-height: 600px){
+    .Menu_navbar{
+        top: 20px;
+        transform: initial;
+    }
+}
+@media screen and (min-width: 1025px){
+    /*= MENU NAVBAR =*/
+    .Menu_navbar{
+        display: initial;
+        flex-direction: row;
+        align-items: stretch;
+        flex: 1;
+        position: static;
+        top: auto;
+        transform: none;
+        z-index: 1;
+    }
+    .Menu_navbar.-Right-{
+        margin-bottom: 0;
+    }
+    /*= ASIDE =*/
+    .Menu_navbar aside{
+        padding: 20px 0; 
+        width: auto;
+        background-color: transparent; 
+        clip-path: none;
+    }
+    .Menu_navbar.-Left- aside{
+        transform: skewX(var(--deg1));
+    }
+    .Menu_navbar.-Right- aside{
+        position: relative;
+        bottom: auto;
+        transform: skewX(var(--deg-1)); 
+    }
+    .Aside_style{
+        position: absolute;
+        height: 100%;
+        top: 0;
+        background-color: var(--clrZ);
+        border-bottom: 2px solid var(--clrB); 
+        clip-path: none;
+    }
+    .Menu_navbar.-Left- .Aside_style{
+        border-left: 2px solid var(--clrB); 
+    }
+    .Menu_navbar.-Right- .Aside_style{
+        right: 0;
+        border-right: 2px solid var(--clrB); 
+    }
+    .Aside_style p{
+        padding: 0;
+    }
+    .Aside_style a{
+        transition: border-color .3s ease,
+            background-color .3s ease,
+                box-shadow .3s ease;
+    }
+    .Menu_navbar.-Left- .Aside_style p{
+        transform: skewX(var(--deg-1));
+    }
+    .Menu_navbar.-Right- .Aside_style p,
+    .Aside_style a{
+        transform: skewX(var(--deg1));
+    }
+    .Menu_navbar.-Right- nav{
+        padding-bottom: 0;
+    }
+    .Menu_navbar nav ul{
+        display: flex;
+    }
+    .Menu_navbar nav li{
+        margin-top: 0;
+        flex: 1;
+    }
+    .Menu_navbar.-Left- nav li:nth-last-of-type(3){
+        margin-left: 14px;
+    }
+    .Menu_navbar.-Right- nav li:nth-last-of-type(1){
+        margin-right: 14px;
+    }
+    .Menu_navbar nav a{
+        position: static;
+        padding: 25px 0;
+        width: auto;
+        background-color: transparent;
+        clip-path: none;
+        color: var(--txt1);
+        font-size: 24px;
+    }
+    .Menu_navbar nav a::before{
+        position: static;
+        content: none;
+        inset: initial;
+        background-color: transparent;
+        clip-path: none;
+        z-index: auto;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px){
+    .Aside_style{ 
+        width: 102%;
+    }
+    .Aside_style a{
+        margin-left: 5px;
+    }
+}
+@media screen and (min-width: 1441px){
+    .Aside_style{ 
+        width: 105%;
+    }
+}

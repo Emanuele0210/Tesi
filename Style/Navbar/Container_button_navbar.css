@@ -1,0 +1,85 @@
+/*==========================================*/
+/*= CONTAINER BUTTON NAVBAR =*/
+/*==========================================*/
+.Container_button_navbar.-Left-{
+    transform: scaleX(-1);
+}
+.Button_navbar{
+    position: relative;
+    padding: 2px 1px;
+    background-color: var(--clrB);
+    clip-path: var( --plgn_hexagon_1);
+    cursor: pointer;
+}
+.Button_navbar.-Invisible-{
+    visibility: hidden;
+    position: absolute;
+}
+.Button_navbar_style{
+    position: relative;
+    padding: 10px 15px;
+    background-color: var(--clrZ);
+    clip-path: var( --plgn_hexagon_-1);
+}
+.Button_navbar_style .-Close-{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    background-color: var(--clrZ);
+}
+.Button_navbar_style svg{
+    display: block;
+    width: 32px;
+    height: 32px;
+    fill: var(--mgk);
+    filter: drop-shadow(0 0 3px var(--mgk));
+}
+@media screen and (max-width: 1024px){
+    .Button_navbar:active{
+        background-color: var(--mgk);
+    }
+}
+@media screen and (min-width: 1025px){
+    .Button_navbar{
+        padding:0 0 2px 2px;
+        clip-path: var(--plgn6);
+        transition: background-color .3s ease;
+    }
+    .Button_navbar_style{
+        position: relative;
+        background-color: var(--clrZ);
+        padding: 5px 50px;
+        clip-path: var(--plgn6);
+    }
+    .Button_navbar_style svg{
+        width: 48px;
+        height: 48px;
+        fill: var(--mgk);
+        filter: drop-shadow(0 0 5px var(--mgk));
+        transition: filter .3s ease;
+    }
+    .Button_navbar:hover{
+        background-color: var(--mgk);
+    }
+    .Button_navbar:hover > .Button_navbar_style svg{
+        filter: drop-shadow(0 0 5px var(--mgk))  drop-shadow(0 0 1px var(--mgk));
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px){
+    .Button_navbar_style{
+        padding: 5px 35px;
+    }
+    .Button_navbar_style .-Close-{
+        padding: 5px 35px;
+    }
+}
+@media screen and (min-width: 1441px){
+    .Button_navbar_style{
+        padding: 5px 50px;
+    }
+    .Button_navbar_style .-Close-{
+        padding: 5px 50px;
+    }
+}
