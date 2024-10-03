@@ -1,0 +1,122 @@
+svg{
+    display: none;
+}
+/*==========================================*/
+/*= NAVIGATION BAR =*/
+/*==========================================*/
+.Navbar{
+    position: relative;
+    background-color: var(--clrA);
+}
+.Navbar::before,
+.Navbar::after{/*NOT TOUCH*/
+    position: absolute;
+    content: "";
+    top: 95%;
+    width: 25%;
+    height: 15px;
+    background-color: var(--clrA);
+    clip-path: var(--plgn3);
+    z-index: 2;
+}
+.Navbar::before{/*NOT TOUCH*/
+    right: 0px;
+}
+.Navbar::after{/*NOT TOUCH*/
+    left: 0px;
+    transform: scaleX(-1);
+}
+@media screen and (min-width: 1025px){
+    .Navbar::before,
+    .Navbar::after{
+        width: 15%;
+        height: 30px;
+    }
+}
+/*==========================================*/
+/*= STRUCTURE NAVBAR =*/
+/*==========================================*/
+.Structure_navbar{
+    display: flex;
+    -webkit-user-select: none; /* Chrome, Safari, Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+.Container_button_navbar{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex: 1;
+    margin: 9px 1.5vw 0;
+    
+    /*.Continue file: /Style/NavBar/Container_button_navbar.css*/
+}
+.Menu_navbar{
+    visibility: hidden;
+    position: absolute;
+    top: 74px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0f0f0f;
+    overflow-y: scroll;
+    z-index: 1;
+    /*.Continue file: /Style/NavBar/Menu_navbar.css*/
+}
+.Menu_navbar::before,
+.Menu_navbar::after{
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 300px;
+    top: calc(25% - 43px);
+    clip-path: var(--plgn_trapezoide);
+    background-color: #292929;
+}
+.Menu_navbar::after{
+    right: 0;
+    transform: scaleX(-1);
+}
+@media screen and (max-height: 600px){
+    .Menu_navbar::before,
+    .Menu_navbar::after{
+        top: 105px;
+    }
+}
+@media screen and (min-width: 1441px){
+    .Container_button_navbar{
+        flex: .18;
+    }
+    .Menu_navbar{
+        flex: .64;
+        min-width: 1008px;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px){
+    .Container_button_navbar{
+        flex: .15;
+    }
+    .Menu_navbar{
+        flex: .7;
+    }
+}
+@media screen and (min-width:1025px){
+    .Menu_navbar{
+        visibility: initial;
+        display: flex;
+        position: initial;
+        top: initial;
+        width: initial;
+        height: initial;
+        background-color: initial;
+        overflow-y: initial;
+        z-index: initial;
+    }
+    .Container_button_navbar{
+        margin: initial;
+    }
+    .Menu_navbar::before,
+    .Menu_navbar::after{
+        display: none;
+    }
+}

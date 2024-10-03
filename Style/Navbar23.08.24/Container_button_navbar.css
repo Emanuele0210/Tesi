@@ -1,0 +1,70 @@
+/*==========================================*/
+/*= CONTAINER BUTTON NAVBAR =*/
+/*==========================================*/
+.Container_button_navbar.-Left-{
+    transform: scaleX(-1);
+}
+.Button_container_navigation{
+    position: relative;
+    clip-path: var(--plgn_hexagon_1);
+    cursor: pointer;
+}
+.Button_container_navigation.-Invisible-{
+    visibility: hidden;
+    position: absolute;
+}
+.Button_navigation_stile{
+    padding: 12px 16px;
+    background-color: var(--clrB);
+}
+.Button_navigation_stile.-Close-{
+    display: none;
+    position: absolute;
+    top: 0;
+}
+.Button_navigation_stile::before{
+    position: absolute;
+    content: "";
+    inset: 2px 1px;
+    clip-path: var(--plgn_hexagon_-1);
+    background-color: var(--clrZ);
+}
+.Button_navigation_stile svg{
+    display: block;
+    width: 32px;
+    height: 32px;
+    fill: var(--mgk);
+    filter: drop-shadow(0 0 3px var(--mgk));
+}
+.Button_navigation_stile:active{
+    background-color: var(--mgk);
+}
+@media screen and (min-width: 1441px){
+    .Button_navigation_stile{
+        padding: 5px 50px 7px 52px;
+    }
+}
+@media screen and (min-width: 1025px) and (max-width: 1440px){
+    .Button_navigation_stile{
+        padding: 5px 30px 7px 32px;
+    }
+}
+@media screen and (min-width: 1025px){
+    .Button_container_navigation{
+        clip-path: var(--plgn6);
+    }
+    .Button_navigation_stile{
+        transition: background-color .3s ease;
+    }
+    .Button_navigation_stile::before{
+        inset:0 0 2px 2px;
+        clip-path: var(--plgn6);
+    }
+    .Button_navigation_stile svg{
+        width: 48px;
+        height: 48px;
+        fill: var(--mgk);
+        filter: drop-shadow(0 0 5px var(--mgk));
+        transition: filter .3s ease;
+    }
+}
