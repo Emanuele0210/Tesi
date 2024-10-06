@@ -1,0 +1,33 @@
+.Container_title_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 65vw;
+}
+.Container_title_page img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+}
+.Title_page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    border: 3px solid var(--mgk);
+    box-shadow: inset 0 0 10px 2px var(--mgk), 0 0 10px 2px var(--mgk);
+    transform: rotateZ(45deg);
+}
+.Title_page h1{
+    font-family: Mars;
+    font-size: 12vw;
+    -webkit-text-stroke: 2px var(--clrZ);
+    text-shadow: 0 0 10px var(--mgk),0 0 10px var(--mgk),0 0 10px var(--mgk),
+        0 0 5px var(--mgk);
+    text-align: center;
+    transform: rotateZ(-45deg);
+}
