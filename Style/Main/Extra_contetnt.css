@@ -1,0 +1,117 @@
+.Extra_content_main{
+    width: 100%;
+    margin: 15px 0 45px;
+}
+
+.Extra_content_main h3{
+    position: relative;
+    font-size: 36px;
+    padding: 20px;
+    cursor: pointer;
+    background-color: var(--clrA);
+    transition: color .3s ease,background-color .3s ease;
+}
+.Extra_content_main h3::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    border: 2px solid var(--clrB);
+}
+
+.Container_overflow_hidden{
+    display: flex;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    border-left: 2px solid var(--clrB);
+    border-right: 2px solid var(--clrB);
+    transition: height 0.5s ease;
+}
+.Container_overflow_hidden .-Estetic-{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: 0 20% 0 20px;
+    width: 80%;
+    height: 360px;
+    font-size: 20px;
+}
+.Container_overflow_hidden .-Estetic-::before{
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: var(--clrZ-2);
+    transform: skewX(-10deg);
+    transform-origin: top;
+    z-index: -1;
+    backdrop-filter: (12px);
+}
+.Extra_content_main .Header-extra:nth-of-type(3) .Container_overflow_hidden{
+    border-bottom: 2px solid var(--clrB);
+}
+.Container_overflow_hidden .Extra_content_background{
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: 50% 0;
+}
+.Button_extra{
+    margin-top: 20px;
+}
+.Button_extra a{
+    display: block;
+    padding: 15px;
+    clip-path: var(--plgn_hexagon_1);
+    background-color: var(--mgk);
+    color: var(--clrZ);
+}
+/*===========================
+    HOVER AND ACTIVE  
+  =========================== */
+  .Extra_content_main h3:hover{
+    color: var(--mgk);
+}
+.Extra_content_main h3.active{
+    color: var(--mgk);
+    background-color: var(--mgk-1);
+}
+.Extra_content_main h3.active::before{
+    border-color: var(--mgk);
+}
+.Container_overflow_hidden.active{
+    height: 360px;
+} 
+@media screen and (min-width: 1025px){
+    .Extra_content_main{
+        width: 85%;
+        margin: 30px 0 60px;
+    }
+    .Extra_content_main h3{
+        font-size: 56px;
+    }
+    .Container_overflow_hidden .-Estetic-{
+        padding: 0 15% 0 50px;
+        width: 50%;
+        height: 480px;
+        font-size: 24px;
+    }
+    .Container_overflow_hidden .-Estetic-::before{
+        background-color: var(--clrZ-2);
+        transform: skewX(-20deg);
+    }
+    .Container_overflow_hidden .Extra_content_background{
+        height: 480px;
+        object-fit: cover;
+        object-position: 0 0;
+    }
+    .Button_extra a{
+        padding: 15px;
+    }
+    .Container_overflow_hidden.active{
+        height: 480px;
+    } 
+}

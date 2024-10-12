@@ -1,0 +1,140 @@
+:root{
+    --mgk:  hsl(160, 100%, 45%);
+    --mgk-1: hsl(162, 45%, 15%);
+    --mgk-2:  hsl(159, 100%, 30%);
+    --trp: #e20093;
+    --trp-1: #36142a;
+    --eft: #f7dc71;
+    --clrY: hsl(0, 0%, 5%);
+    --clrA: hsl(0, 0%, 13%);
+    --clrA-1: hsla(0, 0%, 13%, 0.425);
+    --clrB: hsl(0, 0%, 23%);
+    --clrC: hsl(0, 0%, 10%);
+    --clrD: hsl(0, 0%, 26%);
+    --clrE: hsl(0, 0%, 17%);
+    --clrZ: hsl(0, 0%, 0%);
+    --clrZ-1: hsla(0, 0%, 0%, 0.9);
+    --clrZ-2: hsla(0, 0%, 0%, 0.7);
+    --txt1:hsl(0, 4%, 91%);
+    --txt2: hsl(0, 0%, 45%);
+    --txt3:hsl(0, 4%, 71%);
+    /*=======================================*/
+    --deg1: 35deg;
+    --deg-1: -35deg;
+    /*=======================================*/
+    --var_plgn_1: 12px;
+    --var_plgn_2: 16px;
+    --var_plgn_3: 24px;
+    --var_plgn_4: 36px;
+    --var_plgn_5: 48px;
+    --var_plgn_6: 64px;
+
+    --plgn_iregular_2: polygon(var(--var_plgn_5) 0%, 100% 0, 
+    100% calc(100% - var(--var_plgn_5)), calc(100% - var(--var_plgn_5)) 100%, 
+    0 100%, 0% var(--var_plgn_5));
+
+    --plgn_iregular_1: polygon(100% 0,100% 100%, var(--var_plgn_4) 100%, 0% calc(100% - var(--var_plgn_2)), 0 0);
+
+    --plgn_iregular_3: polygon(var(--var_plgn_6) 0%, 100% 0, 100% 100%, 0 100%, 0% var(--var_plgn_6));
+    
+    --plgn_iregular_4: polygon(var(--var_plgn_2) 0%, 100% 0, 100% calc(100% - var(--var_plgn_2)), calc(100% - var(--var_plgn_2)) 100%, 0 100%, 0% var(--var_plgn_2));
+    
+    --plgn_iregular_5: polygon(100% 0, 100% calc(100% - var(--var_plgn_3)), calc(100% - var(--var_plgn_3)) 100%, 0 100%, 0 0);
+    /* ========================== */
+    --plgn_trapezoid_1: polygon(0 0, 100% 0, 100% 100%, var(--var_plgn_5) 100%);
+    --plgn_trapezoid_2: polygon(0 0, 100% 0, 100% 100%, var(--var_plgn_2) 100%);
+
+    --plgn_trapezoid_3: polygon(var(--var_plgn_5) 0%, calc(100% - var(--var_plgn_5)) 0%, 100% 100%, 0% 100%);
+    --plgn_trapezoid_4: polygon(var(--var_plgn_2) 0%, calc(100% - var(--var_plgn_2)) 0%, 100% 100%, 0% 100%);
+
+    --plgn_trapezoid_5:  polygon(0 0, calc(100% - var(--var_plgn_2)) 0%, 100% var(--var_plgn_2), 100% calc(100% - var(--var_plgn_2)), calc(100% - var(--var_plgn_2)) 100%, 0 100%);
+    /* ========================== */
+    --plgn_hexagon_1: polygon(var(--var_plgn_1) 0, calc(100% - var(--var_plgn_1)) 0%, 
+    100% 50%, calc(100% - var(--var_plgn_1)) 100%, var(--var_plgn_1) 100%, 0 50%);
+
+    --plgn_hexagon_-1: polygon(var(--var_plgn_1) 0, calc(100% - var(--var_plgn_1)) 0%, 
+    calc(100% - 1px) 50%, calc(100% - var(--var_plgn_1)) 100%, var(--var_plgn_1) 100%,calc(0% + 1px) 50%);
+
+    --plgn_hexagon_2: polygon(var(--var_plgn_2) 0, calc(100% - var(--var_plgn_2)) 0%, 
+    100% 50%, calc(100% - var(--var_plgn_2)) 100%, var(--var_plgn_2) 100%, 0 50%);
+
+    --plgn_hexagon_-2: polygon(var(--var_plgn_2) 0, calc(100% - var(--var_plgn_2)) 0%, 
+    calc(100% - 1px) 50%, calc(100% - var(--var_plgn_2)) 100%, var(--var_plgn_2) 100%,calc(0% + 1px) 50%);
+    --var_plgn_A: 24px;
+}
+/* ==========================
+   FONT-FACE
+   ========================== */
+   @font-face{
+    font-family: Oswald;
+    src: url(../../Fonts/Oswald-VariableFont_wght.ttf);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: Mars;
+    src: url(../../Fonts/marspolice.ttf);
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/* ==========================
+    MEDIA SCREEN GENERIC
+   ========================== */
+@media screen and (min-width: 1025px){
+    .-Mobile-{
+        display: none !important;
+    }
+    /* ::-webkit-scrollbar {
+        display: none;
+        width: 16px;
+        height: 16px;
+    }
+    ::-webkit-scrollbar-track {
+        background: var(--clrZ);
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--clrB);
+        border: 5px solid var(--clrZ);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--mgk); 
+    } */
+}
+@media screen and (max-width: 1024px){
+    .-PC-{
+        display: none !important; 
+    }
+}
+/* ==========================
+     GENERICK HTML
+   ========================== */
+::-webkit-scrollbar {
+    display: none;
+}
+.-Uppercase-{
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+/*===========================
+    MAIN SETTINGS
+  =========================== */
+.Flex_settings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Content_with_ad{
+    padding: 0 15px;
+}
+@media (min-width: 1025px){
+    .Content_with_ad{
+        display: grid;
+        grid-template-columns: 1fr 65% 1fr;
+        gap: 40px;
+        width: 100%;
+        padding: 20px 10px;
+    }
+}
